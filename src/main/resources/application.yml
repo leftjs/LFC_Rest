@@ -1,0 +1,34 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB_INF/jsp/
+      suffix: .jsp
+  aop:
+    auto: true
+    proxy-target-class: false
+#  profiles:
+#    active: container
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+#  devtools:
+#    restart:
+#      additional-paths: .
+
+
+---
+spring:
+  profiles: container
+  datasource:
+    url: jdbc:sqlserver://localhost;databaseName=lfc
+    username: sa
+    password: Leftjs@github.com
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.SQLServer2008Dialect
+    database: SQL_SERVER
+    generate-ddl: true
+#    openInView: false
+#    generate-ddl: false
