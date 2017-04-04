@@ -1,14 +1,19 @@
 spring:
   mvc:
     view:
-      prefix: /WEB_INF/jsp/
+      prefix: /WEB-INF/jsp/
       suffix: .jsp
   aop:
     auto: true
     proxy-target-class: false
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
 #  profiles:
 #    active: container
-#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 #  devtools:
 #    restart:
