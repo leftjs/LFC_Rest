@@ -2,7 +2,6 @@ package com.leftjs.lfc;
 
 import org.hibernate.dialect.SQLServer2008Dialect;
 import org.hibernate.type.StandardBasicTypes;
-import org.springframework.context.annotation.Configuration;
 
 import java.sql.Types;
 
