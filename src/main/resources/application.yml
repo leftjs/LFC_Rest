@@ -12,8 +12,18 @@ spring:
         content:
           enabled: true
           paths: /**
-#  profiles:
-#    active: container
+  mandatory-file-encoding: UTF-8
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+
+  profiles:
+    active: container
+server:
+  tomcat:
+    uri-encoding: UTF-8
+
 
 #  devtools:
 #    restart:
