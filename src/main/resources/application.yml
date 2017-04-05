@@ -23,12 +23,9 @@ spring:
 server:
   tomcat:
     uri-encoding: UTF-8
-
-
 #  devtools:
 #    restart:
 #      additional-paths: .
-
 
 ---
 spring:
