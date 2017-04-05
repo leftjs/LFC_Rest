@@ -12,8 +12,8 @@ spring:
         content:
           enabled: true
           paths: /**
-#  profiles:
-#    active: container
+  profiles:
+    active: container
 
 #  devtools:
 #    restart:
@@ -24,15 +24,16 @@ spring:
 spring:
   profiles: container
   datasource:
-    url: jdbc:sqlserver://localhost;databaseName=lfc
+    url: jdbc:sqlserver://localhost;databaseName=lfc;useUnicode=true;characterEncoding=UTF-8
     username: sa
     password: Leftjs@github.com
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    platform: mssql
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.SQLServer2008Dialect
+    database-platform: com.leftjs.lfc.SQLServerUnicodeDialect
     database: SQL_SERVER
     generate-ddl: true
 #    openInView: false
