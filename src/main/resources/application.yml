@@ -12,8 +12,8 @@ spring:
         content:
           enabled: true
           paths: /**
-  profiles:
-    active: container
+#  profiles:
+#    active: container
 
 #  devtools:
 #    restart:
